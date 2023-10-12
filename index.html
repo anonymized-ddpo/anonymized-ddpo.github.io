@@ -19,38 +19,13 @@
         <h2 class="title">Training Diffusion Models with Reinforcement Learning</h2>
 
         <div class="teaser">
-            <div class="teaser-title">Compressibility: <em>llama</em></div>
-            <div class="teaser-row">
-                <img src="images_256/teaser/llama/0.jpg" />
-                <img src="images_256/teaser/llama/9.jpg" />
-                <img src="images_256/teaser/llama/39.jpg" />
-                <img src="images_256/teaser/llama/59.jpg" />
-                <img src="images_256/teaser/llama/79.jpg" />
-                <img src="images_256/teaser/llama/99.jpg" />
-            </div>
-            <div class="teaser-title">Aesthetic Quality: <em>lion</em></div>
-            <div class="teaser-row">
-                <img src="images_256/teaser/lion/0.jpg" />
-                <img src="images_256/teaser/lion/19.jpg" />
-                <img src="images_256/teaser/lion/29.jpg" />
-                <img src="images_256/teaser/lion/49.jpg" />
-                <img src="images_256/teaser/lion/59.jpg" />
-                <img src="images_256/teaser/lion/109.jpg" />
-            </div>
-            <div class="teaser-title">Prompt-Image Alignment: <em>a raccoon washing dishes</em></div>
-            <div class="teaser-row">
-                <img src="images_256/teaser/raccoon/0.jpg" />
-                <img src="images_256/teaser/raccoon/1.jpg" />
-                <img src="images_256/teaser/raccoon/2.jpg" />
-                <img src="images_256/teaser/raccoon/3.jpg" />
-                <img src="images_256/teaser/raccoon/4.jpg" />
-                <img src="images_256/teaser/raccoon/5.jpg" />
-            </div>
-            <div class="teaser-subtitle">
-                <span class="arrow-left"></span>
-                <span class="arrow-text">RL training</span>
-                <span class="arrow-right"></span>
-                <span class="arrow-head"></span>
+            <video autoplay muted playsinline disableRemotePlayback poster="images/teaser/teaser.jpg"
+                onended="reveal()">
+                <source src="images/teaser/teaser.mp4" type="video/mp4">
+            </video>
+            <div class="replay">
+                <img src="images/replay.png" />
+                <div>replay</div>
             </div>
         </div>
 
@@ -68,10 +43,10 @@
         </div>
 
         <div class="vlm-bertscore">
-            <img src="images_256/vlm-bertscore.jpg" />
+            <img src="images/vlm-bertscore.jpg" />
             <p class="caption">
-                We use feedback from a large vision-language model, <a href="https://llava-vl.github.io"
-                   >LLaVA</a>, to automatically improve prompt-image alignment.
+                We use feedback from a large vision-language model, <a href="https://llava-vl.github.io">LLaVA</a>, to
+                automatically improve prompt-image alignment.
             </p>
         </div>
 
@@ -79,60 +54,60 @@
             <h3>Results</h3>
             <p>
                 We first evaluate our method on a few basic reward functions: compressibility, incompressibility, and
-                aesthetic quality as determined by the <a href="https://laion.ai/blog/laion-aesthetics/"
-                   >LAION aesthetic predictor</a>.
+                aesthetic quality as determined by the <a href="https://laion.ai/blog/laion-aesthetics/">LAION aesthetic
+                    predictor</a>.
             </p>
             <div class="results-grid results-grid-main">
                 <div>
                     <span>Base Model</span>
-                    <img src="images_256/algorithm-comparison/pretrained/bird.jpg" />
-                    <img src="images_256/algorithm-comparison/pretrained/fox.jpg" />
-                    <img src="images_256/algorithm-comparison/pretrained/bear.jpg" />
-                    <img src="images_256/algorithm-comparison/pretrained/gorilla.jpg" />
-                    <img src="images_256/algorithm-comparison/pretrained/dog.jpg" />
-                    <img src="images_256/algorithm-comparison/pretrained/hen.jpg" />
-                    <img src="images_256/algorithm-comparison/pretrained/squirrel.jpg" />
-                    <img src="images_256/algorithm-comparison/pretrained/hare.jpg" />
-                    <img src="images_256/algorithm-comparison/pretrained/cat.jpg" />
+                    <img src="images/algorithm-comparison/lora/pretrained/fox.jpg" />
+                    <img src="images/algorithm-comparison/lora/pretrained/dolphin.jpg" />
+                    <img src="images/algorithm-comparison/lora/pretrained/cow.jpg" />
+                    <img src="images/algorithm-comparison/lora/pretrained/hedgehog.jpg" />
+                    <img src="images/algorithm-comparison/lora/pretrained/wolf.jpg" />
+                    <img src="images/algorithm-comparison/lora/pretrained/horse.jpg" />
+                    <img src="images/algorithm-comparison/lora/pretrained/pig.jpg" />
+                    <img src="images/algorithm-comparison/lora/pretrained/squirrel.jpg" />
+                    <img src="images/algorithm-comparison/lora/pretrained/cat.jpg" />
                 </div>
 
                 <div>
                     <span>Aesthetic</span>
-                    <img src="images_256/algorithm-comparison/aesthetic-ppo/bird.jpg" />
-                    <img src="images_256/algorithm-comparison/aesthetic-ppo/fox.jpg" />
-                    <img src="images_256/algorithm-comparison/aesthetic-ppo/bear.jpg" />
-                    <img src="images_256/algorithm-comparison/aesthetic-ppo/gorilla.jpg" />
-                    <img src="images_256/algorithm-comparison/aesthetic-ppo/dog.jpg" />
-                    <img src="images_256/algorithm-comparison/aesthetic-ppo/hen.jpg" />
-                    <img src="images_256/algorithm-comparison/aesthetic-ppo/squirrel.jpg" />
-                    <img src="images_256/algorithm-comparison/aesthetic-ppo/hare.jpg" />
-                    <img src="images_256/algorithm-comparison/aesthetic-ppo/cat.jpg" />
+                    <img src="images/algorithm-comparison/lora/aesthetic/fox.jpg" />
+                    <img src="images/algorithm-comparison/lora/aesthetic/dolphin.jpg" />
+                    <img src="images/algorithm-comparison/lora/aesthetic/cow.jpg" />
+                    <img src="images/algorithm-comparison/lora/aesthetic/hedgehog.jpg" />
+                    <img src="images/algorithm-comparison/lora/aesthetic/wolf.jpg" />
+                    <img src="images/algorithm-comparison/lora/aesthetic/horse.jpg" />
+                    <img src="images/algorithm-comparison/lora/aesthetic/pig.jpg" />
+                    <img src="images/algorithm-comparison/lora/aesthetic/squirrel.jpg" />
+                    <img src="images/algorithm-comparison/lora/aesthetic/cat.jpg" />
                 </div>
 
                 <div>
                     <span>Compressibility</span>
-                    <img src="images_256/algorithm-comparison/jpeg-ppo/bird.jpg" />
-                    <img src="images_256/algorithm-comparison/jpeg-ppo/fox.jpg" />
-                    <img src="images_256/algorithm-comparison/jpeg-ppo/bear.jpg" />
-                    <img src="images_256/algorithm-comparison/jpeg-ppo/gorilla.jpg" />
-                    <img src="images_256/algorithm-comparison/jpeg-ppo/dog.jpg" />
-                    <img src="images_256/algorithm-comparison/jpeg-ppo/hen.jpg" />
-                    <img src="images_256/algorithm-comparison/jpeg-ppo/squirrel.jpg" />
-                    <img src="images_256/algorithm-comparison/jpeg-ppo/hare.jpg" />
-                    <img src="images_256/algorithm-comparison/jpeg-ppo/cat.jpg" />
+                    <img src="images/algorithm-comparison/lora/compress/fox.jpg" />
+                    <img src="images/algorithm-comparison/lora/compress/dolphin.jpg" />
+                    <img src="images/algorithm-comparison/lora/compress/cow.jpg" />
+                    <img src="images/algorithm-comparison/lora/compress/hedgehog.jpg" />
+                    <img src="images/algorithm-comparison/lora/compress/wolf.jpg" />
+                    <img src="images/algorithm-comparison/lora/compress/horse.jpg" />
+                    <img src="images/algorithm-comparison/lora/compress/pig.jpg" />
+                    <img src="images/algorithm-comparison/lora/compress/squirrel.jpg" />
+                    <img src="images/algorithm-comparison/lora/compress/cat.jpg" />
                 </div>
 
                 <div>
                     <span>Incompressibility</span>
-                    <img src="images_256/algorithm-comparison/neg-jpeg-ppo/bird.jpg" />
-                    <img src="images_256/algorithm-comparison/neg-jpeg-ppo/fox.jpg" />
-                    <img src="images_256/algorithm-comparison/neg-jpeg-ppo/bear.jpg" />
-                    <img src="images_256/algorithm-comparison/neg-jpeg-ppo/gorilla.jpg" />
-                    <img src="images_256/algorithm-comparison/neg-jpeg-ppo/dog.jpg" />
-                    <img src="images_256/algorithm-comparison/neg-jpeg-ppo/hen.jpg" />
-                    <img src="images_256/algorithm-comparison/neg-jpeg-ppo/squirrel.jpg" />
-                    <img src="images_256/algorithm-comparison/neg-jpeg-ppo/hare.jpg" />
-                    <img src="images_256/algorithm-comparison/neg-jpeg-ppo/cat.jpg" />
+                    <img src="images/algorithm-comparison/lora/incompress/fox.jpg" />
+                    <img src="images/algorithm-comparison/lora/incompress/dolphin.jpg" />
+                    <img src="images/algorithm-comparison/lora/incompress/cow.jpg" />
+                    <img src="images/algorithm-comparison/lora/incompress/hedgehog.jpg" />
+                    <img src="images/algorithm-comparison/lora/incompress/wolf.jpg" />
+                    <img src="images/algorithm-comparison/lora/incompress/horse.jpg" />
+                    <img src="images/algorithm-comparison/lora/incompress/pig.jpg" />
+                    <img src="images/algorithm-comparison/lora/incompress/squirrel.jpg" />
+                    <img src="images/algorithm-comparison/lora/incompress/cat.jpg" />
                 </div>
             </div>
         </div>
@@ -146,18 +121,17 @@
                 these kinds of prompts.
                 Each series of 3 images shows samples for the same prompt and random seed throughout training, with the
                 first sample coming from the base model.
-                Interestingly, the model shifts towards a more cartoon-like style, which was not intentionally optimized
-                for.
+                Interestingly, the model shifts towards a more cartoon-like style, which was not intentional.
                 We hypothesize that this is because animals doing human-like activities are more likely to appear in a
-                cartoon-like style in the pretraining distribution, so the model shifts towards this style to more
+                cartoon-like style in the pretraining data, so the model shifts towards this style to more
                 easily align with the prompt.
             </p>
             <div class="results-grid results-grid-vlm">
                 <div>
                     <span class="caption">a dolphin riding a bike</span>
-                    <img src="images_256/vlm/dolphin_bike/0.jpg" />
-                    <img src="images_256/vlm/dolphin_bike/1.jpg" />
-                    <img src="images_256/vlm/dolphin_bike/5.jpg" />
+                    <img src="images/vlm/dolphin_bike/0.jpg" />
+                    <img src="images/vlm/dolphin_bike/1.jpg" />
+                    <img src="images/vlm/dolphin_bike/5.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -167,9 +141,9 @@
                 </div>
                 <div>
                     <span class="caption">a hedgehog riding a bike</span>
-                    <img src="images_256/vlm/hedgehog_bike/0.jpg" />
-                    <img src="images_256/vlm/hedgehog_bike/1.jpg" />
-                    <img src="images_256/vlm/hedgehog_bike/2.jpg" />
+                    <img src="images/vlm/hedgehog_bike/0.jpg" />
+                    <img src="images/vlm/hedgehog_bike/1.jpg" />
+                    <img src="images/vlm/hedgehog_bike/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -179,9 +153,9 @@
                 </div>
                 <div>
                     <span class="caption">a dog riding a bike</span>
-                    <img src="images_256/vlm/dog_bike/0.jpg" />
-                    <img src="images_256/vlm/dog_bike/2.jpg" />
-                    <img src="images_256/vlm/dog_bike/5.jpg" />
+                    <img src="images/vlm/dog_bike/0.jpg" />
+                    <img src="images/vlm/dog_bike/2.jpg" />
+                    <img src="images/vlm/dog_bike/5.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -191,9 +165,9 @@
                 </div>
                 <div>
                     <span class="caption">a lizard riding a bike</span>
-                    <img src="images_256/vlm/lizard_bike/0.jpg" />
-                    <img src="images_256/vlm/lizard_bike/1.jpg" />
-                    <img src="images_256/vlm/lizard_bike/2.jpg" />
+                    <img src="images/vlm/lizard_bike/0.jpg" />
+                    <img src="images/vlm/lizard_bike/1.jpg" />
+                    <img src="images/vlm/lizard_bike/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -203,9 +177,9 @@
                 </div>
                 <div>
                     <span class="caption">a bear washing dishes</span>
-                    <img src="images_256/vlm/bear_dishes/0.jpg" />
-                    <img src="images_256/vlm/bear_dishes/3.jpg" />
-                    <img src="images_256/vlm/bear_dishes/5.jpg" />
+                    <img src="images/vlm/bear_dishes/0.jpg" />
+                    <img src="images/vlm/bear_dishes/3.jpg" />
+                    <img src="images/vlm/bear_dishes/5.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -215,9 +189,9 @@
                 </div>
                 <div>
                     <span class="caption">a shark washing dishes</span>
-                    <img src="images_256/vlm/shark_dishes/0.jpg" />
-                    <img src="images_256/vlm/shark_dishes/1.jpg" />
-                    <img src="images_256/vlm/shark_dishes/2.jpg" />
+                    <img src="images/vlm/shark_dishes/0.jpg" />
+                    <img src="images/vlm/shark_dishes/1.jpg" />
+                    <img src="images/vlm/shark_dishes/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -227,9 +201,9 @@
                 </div>
                 <div>
                     <span class="caption">a frog washing dishes</span>
-                    <img src="images_256/vlm/frog_dishes/0.jpg" />
-                    <img src="images_256/vlm/frog_dishes/1.jpg" />
-                    <img src="images_256/vlm/frog_dishes/2.jpg" />
+                    <img src="images/vlm/frog_dishes/0.jpg" />
+                    <img src="images/vlm/frog_dishes/1.jpg" />
+                    <img src="images/vlm/frog_dishes/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -239,9 +213,9 @@
                 </div>
                 <div>
                     <span class="caption">a monkey washing dishes</span>
-                    <img src="images_256/vlm/monkey_dishes/0.jpg" />
-                    <img src="images_256/vlm/monkey_dishes/1.jpg" />
-                    <img src="images_256/vlm/monkey_dishes/2.jpg" />
+                    <img src="images/vlm/monkey_dishes/0.jpg" />
+                    <img src="images/vlm/monkey_dishes/1.jpg" />
+                    <img src="images/vlm/monkey_dishes/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -251,9 +225,9 @@
                 </div>
                 <div>
                     <span class="caption">a chicken playing chess</span>
-                    <img src="images_256/vlm/chicken_chess/0.jpg" />
-                    <img src="images_256/vlm/chicken_chess/1.jpg" />
-                    <img src="images_256/vlm/chicken_chess/2.jpg" />
+                    <img src="images/vlm/chicken_chess/0.jpg" />
+                    <img src="images/vlm/chicken_chess/1.jpg" />
+                    <img src="images/vlm/chicken_chess/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -263,9 +237,9 @@
                 </div>
                 <div>
                     <span class="caption">an ant playing chess</span>
-                    <img src="images_256/vlm/ant_chess/0.jpg" />
-                    <img src="images_256/vlm/ant_chess/1.jpg" />
-                    <img src="images_256/vlm/ant_chess/5.jpg" />
+                    <img src="images/vlm/ant_chess/0.jpg" />
+                    <img src="images/vlm/ant_chess/1.jpg" />
+                    <img src="images/vlm/ant_chess/5.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -290,54 +264,54 @@
             <div class="results-grid results-grid-generalization">
                 <div>
                     <span>New Animals: Base Model</span>
-                    <img src="images_256/generalization/aesthetic/hippopotamus/0.jpg" />
-                    <img src="images_256/generalization/aesthetic/alligator/0.jpg" />
-                    <img src="images_256/generalization/aesthetic/cockroach/0.jpg" />
-                    <img src="images_256/generalization/aesthetic/elephant/0.jpg" />
-                    <img src="images_256/generalization/aesthetic/giraffe/0.jpg" />
-                    <img src="images_256/generalization/aesthetic/peacock/0.jpg" />
-                    <img src="images_256/generalization/aesthetic/shoebill stork/0.jpg" />
-                    <img src="images_256/generalization/aesthetic/squid/0.jpg" />
-                    <img src="images_256/generalization/aesthetic/walrus/0.jpg" />
+                    <img src="images/generalization/aesthetic-animal/before/0.jpg" />
+                    <img src="images/generalization/aesthetic-animal/before/1.jpg" />
+                    <img src="images/generalization/aesthetic-animal/before/2.jpg" />
+                    <img src="images/generalization/aesthetic-animal/before/3.jpg" />
+                    <img src="images/generalization/aesthetic-animal/before/4.jpg" />
+                    <img src="images/generalization/aesthetic-animal/before/5.jpg" />
+                    <img src="images/generalization/aesthetic-animal/before/6.jpg" />
+                    <img src="images/generalization/aesthetic-animal/before/7.jpg" />
+                    <img src="images/generalization/aesthetic-animal/before/8.jpg" />
                 </div>
 
                 <div>
                     <span>New Animals: Aesthetic</span>
-                    <img src="images_256/generalization/aesthetic/hippopotamus/1.jpg" />
-                    <img src="images_256/generalization/aesthetic/alligator/1.jpg" />
-                    <img src="images_256/generalization/aesthetic/cockroach/1.jpg" />
-                    <img src="images_256/generalization/aesthetic/elephant/1.jpg" />
-                    <img src="images_256/generalization/aesthetic/giraffe/1.jpg" />
-                    <img src="images_256/generalization/aesthetic/peacock/1.jpg" />
-                    <img src="images_256/generalization/aesthetic/shoebill stork/1.jpg" />
-                    <img src="images_256/generalization/aesthetic/squid/1.jpg" />
-                    <img src="images_256/generalization/aesthetic/walrus/1.jpg" />
+                    <img src="images/generalization/aesthetic-animal/after/0.jpg" />
+                    <img src="images/generalization/aesthetic-animal/after/1.jpg" />
+                    <img src="images/generalization/aesthetic-animal/after/2.jpg" />
+                    <img src="images/generalization/aesthetic-animal/after/3.jpg" />
+                    <img src="images/generalization/aesthetic-animal/after/4.jpg" />
+                    <img src="images/generalization/aesthetic-animal/after/5.jpg" />
+                    <img src="images/generalization/aesthetic-animal/after/6.jpg" />
+                    <img src="images/generalization/aesthetic-animal/after/7.jpg" />
+                    <img src="images/generalization/aesthetic-animal/after/8.jpg" />
                 </div>
 
                 <div>
                     <span>Non-Animals: Base Model</span>
-                    <img src="images_256/generalization/aesthetic-objects/plant pot/0.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/bicycle/0.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/bookshelf/0.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/backpack/0.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/sunglasses/0.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/wallet/0.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/shoe/0.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/microwave/0.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/water bottle/0.jpg" />
+                    <img src="images/generalization/aesthetic-objects/before/0.jpg" />
+                    <img src="images/generalization/aesthetic-objects/before/1.jpg" />
+                    <img src="images/generalization/aesthetic-objects/before/2.jpg" />
+                    <img src="images/generalization/aesthetic-objects/before/3.jpg" />
+                    <img src="images/generalization/aesthetic-objects/before/4.jpg" />
+                    <img src="images/generalization/aesthetic-objects/before/5.jpg" />
+                    <img src="images/generalization/aesthetic-objects/before/6.jpg" />
+                    <img src="images/generalization/aesthetic-objects/before/7.jpg" />
+                    <img src="images/generalization/aesthetic-objects/before/8.jpg" />
                 </div>
 
                 <div>
                     <span>Non-Animals: Aesthetic</span>
-                    <img src="images_256/generalization/aesthetic-objects/plant pot/2.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/bicycle/1.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/bookshelf/2.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/backpack/2.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/sunglasses/2.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/wallet/3.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/shoe/3.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/microwave/3.jpg" />
-                    <img src="images_256/generalization/aesthetic-objects/water bottle/3.jpg" />
+                    <img src="images/generalization/aesthetic-objects/after/0.jpg" />
+                    <img src="images/generalization/aesthetic-objects/after/1.jpg" />
+                    <img src="images/generalization/aesthetic-objects/after/2.jpg" />
+                    <img src="images/generalization/aesthetic-objects/after/3.jpg" />
+                    <img src="images/generalization/aesthetic-objects/after/4.jpg" />
+                    <img src="images/generalization/aesthetic-objects/after/5.jpg" />
+                    <img src="images/generalization/aesthetic-objects/after/6.jpg" />
+                    <img src="images/generalization/aesthetic-objects/after/7.jpg" />
+                    <img src="images/generalization/aesthetic-objects/after/8.jpg" />
                 </div>
 
             </div>
@@ -358,9 +332,9 @@
             <div class="results-grid">
                 <div>
                     <span class="caption">a capybara washing dishes</span>
-                    <img src="images_256/vlm/capybara_dishes/0.jpg" />
-                    <img src="images_256/vlm/capybara_dishes/1.jpg" />
-                    <img src="images_256/vlm/capybara_dishes/2.jpg" />
+                    <img src="images/vlm/capybara_dishes/0.jpg" />
+                    <img src="images/vlm/capybara_dishes/1.jpg" />
+                    <img src="images/vlm/capybara_dishes/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -370,9 +344,9 @@
                 </div>
                 <div>
                     <span class="caption">snail playing chess</span>
-                    <img src="images_256/vlm/snail_chess/0.jpg" />
-                    <img src="images_256/vlm/snail_chess/1.jpg" />
-                    <img src="images_256/vlm/snail_chess/5.jpg" />
+                    <img src="images/vlm/snail_chess/0.jpg" />
+                    <img src="images/vlm/snail_chess/1.jpg" />
+                    <img src="images/vlm/snail_chess/5.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -382,9 +356,9 @@
                 </div>
                 <div>
                     <span class="caption">a dog doing laundry</span>
-                    <img src="images_256/vlm/dog_laundry/0.jpg" />
-                    <img src="images_256/vlm/dog_laundry/1.jpg" />
-                    <img src="images_256/vlm/dog_laundry/2.jpg" />
+                    <img src="images/vlm/dog_laundry/0.jpg" />
+                    <img src="images/vlm/dog_laundry/1.jpg" />
+                    <img src="images/vlm/dog_laundry/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -394,9 +368,9 @@
                 </div>
                 <div>
                     <span class="caption">a giraffe playing basketball</span>
-                    <img src="images_256/vlm/giraffe_basketball/0.jpg" />
-                    <img src="images_256/vlm/giraffe_basketball/1.jpg" />
-                    <img src="images_256/vlm/giraffe_basketball/2.jpg" />
+                    <img src="images/vlm/giraffe_basketball/0.jpg" />
+                    <img src="images/vlm/giraffe_basketball/1.jpg" />
+                    <img src="images/vlm/giraffe_basketball/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -406,9 +380,9 @@
                 </div>
                 <div>
                     <span class="caption">a parrot driving a car</span>
-                    <img src="images_256/vlm/parrot_car/0.jpg" />
-                    <img src="images_256/vlm/parrot_car/1.jpg" />
-                    <img src="images_256/vlm/parrot_car/2.jpg" />
+                    <img src="images/vlm/parrot_car/0.jpg" />
+                    <img src="images/vlm/parrot_car/1.jpg" />
+                    <img src="images/vlm/parrot_car/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -418,9 +392,9 @@
                 </div>
                 <div>
                     <span class="caption">a duck taking an exam</span>
-                    <img src="images_256/vlm/duck_exam/0.jpg" />
-                    <img src="images_256/vlm/duck_exam/1.jpg" />
-                    <img src="images_256/vlm/duck_exam/2.jpg" />
+                    <img src="images/vlm/duck_exam/0.jpg" />
+                    <img src="images/vlm/duck_exam/1.jpg" />
+                    <img src="images/vlm/duck_exam/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -430,9 +404,9 @@
                 </div>
                 <div>
                     <span class="caption">a robot fishing in a lake</span>
-                    <img src="images_256/vlm/robot_fishing/0.jpg" />
-                    <img src="images_256/vlm/robot_fishing/1.jpg" />
-                    <img src="images_256/vlm/robot_fishing/2.jpg" />
+                    <img src="images/vlm/robot_fishing/0.jpg" />
+                    <img src="images/vlm/robot_fishing/1.jpg" />
+                    <img src="images/vlm/robot_fishing/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -442,9 +416,9 @@
                 </div>
                 <div>
                     <span class="caption">a horse typing on a keyboard</span>
-                    <img src="images_256/vlm/horse_keyboard/0.jpg" />
-                    <img src="images_256/vlm/horse_keyboard/1.jpg" />
-                    <img src="images_256/vlm/horse_keyboard/2.jpg" />
+                    <img src="images/vlm/horse_keyboard/0.jpg" />
+                    <img src="images/vlm/horse_keyboard/1.jpg" />
+                    <img src="images/vlm/horse_keyboard/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -454,9 +428,9 @@
                 </div>
                 <div>
                     <span class="caption">a rabbit sewing clothes</span>
-                    <img src="images_256/vlm/rabbit_sewing/0.jpg" />
-                    <img src="images_256/vlm/rabbit_sewing/1.jpg" />
-                    <img src="images_256/vlm/rabbit_sewing/2.jpg" />
+                    <img src="images/vlm/rabbit_sewing/0.jpg" />
+                    <img src="images/vlm/rabbit_sewing/1.jpg" />
+                    <img src="images/vlm/rabbit_sewing/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -466,9 +440,9 @@
                 </div>
                 <div>
                     <span class="caption">a tree riding a bike</span>
-                    <img src="images_256/vlm/tree_bike/0.jpg" />
-                    <img src="images_256/vlm/tree_bike/1.jpg" />
-                    <img src="images_256/vlm/tree_bike/2.jpg" />
+                    <img src="images/vlm/tree_bike/0.jpg" />
+                    <img src="images/vlm/tree_bike/1.jpg" />
+                    <img src="images/vlm/tree_bike/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -478,9 +452,9 @@
                 </div>
                 <div>
                     <span class="caption">a car eating a sandwich</span>
-                    <img src="images_256/vlm/car_sandwich/0.jpg" />
-                    <img src="images_256/vlm/car_sandwich/1.jpg" />
-                    <img src="images_256/vlm/car_sandwich/2.jpg" />
+                    <img src="images/vlm/car_sandwich/0.jpg" />
+                    <img src="images/vlm/car_sandwich/1.jpg" />
+                    <img src="images/vlm/car_sandwich/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -490,9 +464,9 @@
                 </div>
                 <div>
                     <span class="caption">an apple playing soccer</span>
-                    <img src="images_256/vlm/apple_soccer/0.jpg" />
-                    <img src="images_256/vlm/apple_soccer/1.jpg" />
-                    <img src="images_256/vlm/apple_soccer/2.jpg" />
+                    <img src="images/vlm/apple_soccer/0.jpg" />
+                    <img src="images/vlm/apple_soccer/1.jpg" />
+                    <img src="images/vlm/apple_soccer/2.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -507,20 +481,17 @@
             <h3>Overoptimization</h3>
             <p>
                 Finetuning on a reward function, especially a learned one, has been observed to lead to reward
-                overoptimization in which the model achieves high reward while moving too far from the pretraining
-                distribution to be useful.
+                overoptimization in which the model exploits the reward function to achieve a high reward in a
+                non-useful way.
                 Our setting is no exception: on all the objectives, the model eventually destroys any meaningful image
-                content to mazimize reward.
-                We also observed that LLaVA is susceptible to typographic attacks:
-                when optimizing for alignment with respect to prompts of the form "<em>n</em> animals", DDPO was able to
-                successfully fool LLaVA by instead generating text loosely resembling the correct number.
+                content to maximize reward.
             </p>
             <div class="results-grid">
                 <div>
                     <span>Compressibility</span>
-                    <img src="images_256/overoptimization/jpeg-ppo-llama/0.jpg" />
-                    <img src="images_256/overoptimization/jpeg-ppo-llama/79.jpg" />
-                    <img src="images_256/overoptimization/jpeg-ppo-llama/109.jpg" />
+                    <img src="images/overoptimization/jpeg-ppo-llama/0.jpg" />
+                    <img src="images/overoptimization/jpeg-ppo-llama/79.jpg" />
+                    <img src="images/overoptimization/jpeg-ppo-llama/109.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
@@ -530,40 +501,67 @@
                 </div>
                 <div>
                     <span>Incompressibility</span>
-                    <img src="images_256/overoptimization/neg-jpeg-ppo-hartebeest/0.jpg" />
-                    <img src="images_256/overoptimization/neg-jpeg-ppo-hartebeest/59.jpg" />
-                    <img src="images_256/overoptimization/neg-jpeg-ppo-hartebeest/109.jpg" />
+                    <img src="images/overoptimization/neg-jpeg-ppo-hartebeest/0.jpg" />
+                    <img src="images/overoptimization/neg-jpeg-ppo-hartebeest/59.jpg" />
+                    <img src="images/overoptimization/neg-jpeg-ppo-hartebeest/109.jpg" />
                     <div>
                         <span class="arrow-left results"></span>
                         <span class="arrow-text results">RL training</span>
                         <span class="arrow-right results"></span>
                         <span class="arrow-head results"></span>
-                    </div>
-                </div>
-                <div>
-                    <span>Aesthetic Quality</span>
-                    <img src="images_256/overoptimization/aesthetic-ppo-lion/0.jpg" />
-                    <img src="images_256/overoptimization/aesthetic-ppo-lion/109.jpg" />
-                    <img src="images_256/overoptimization/aesthetic-ppo-lion/179.jpg" />
-                    <div>
-                        <span class="arrow-left results"></span>
-                        <span class="arrow-text results">RL training</span>
-                        <span class="arrow-right results"></span>
-                        <span class="arrow-head results"></span>
-                    </div>
-                </div>
-                <div>
-                    <span>Counting</span>
-                    <img src="images_256/overoptimization/vlm-counting/six-lions.jpg" />
-                    <img src="images_256/overoptimization/vlm-counting/three-tigers.jpg" />
-                    <img src="images_256/overoptimization/vlm-counting/five-raccoons.jpg" />
-                    <div>
-                        <span class="arrow-head results" style="border-color: white;"></span>
                     </div>
                 </div>
             </div>
+            <br />
+            <p>
+                We also observed that LLaVA is susceptible to typographic attacks:
+                when optimizing for alignment with respect to prompts of the form "<em>n</em> animals", DDPO was able to
+                successfully fool LLaVA by instead generating text loosely resembling the correct number.
+            </p>
+            <div class="results-grid counting">
+                <img src="images/overoptimization/vlm-counting/six-monkeys-2.jpg" />
+                <img src="images/overoptimization/vlm-counting/six-tigers.jpg" />
+                <img src="images/overoptimization/vlm-counting/five-turtles.jpg" />
+                <img src="images/overoptimization/vlm-counting/seven-pigs.jpg" />
+                <img src="images/overoptimization/vlm-counting/six-turtles.jpg" />
+                <img src="images/overoptimization/vlm-counting/eight-lions.jpg" />
+                <img src="images/overoptimization/vlm-counting/four-chickens.jpg" />
+                <img src="images/overoptimization/vlm-counting/three-foxes.jpg" />
+                <img src="images/overoptimization/vlm-counting/seven-lions.jpg" />
+                <img src="images/overoptimization/vlm-counting/eight-foxes.jpg" />
+                <img src="images/overoptimization/vlm-counting/five-frogs.jpg" />
+                <img src="images/overoptimization/vlm-counting/seven-wolves.jpg" />
+                <img src="images/overoptimization/vlm-counting/six-birds.jpg" />
+                <img src="images/overoptimization/vlm-counting/seven-horses.jpg" />
+                <img src="images/overoptimization/vlm-counting/five-wolves.jpg" />
+                <img src="images/overoptimization/vlm-counting/six-dogs.jpg" />
+                <img src="images/overoptimization/vlm-counting/six-frogs.jpg" />
+                <img src="images/overoptimization/vlm-counting/eoght-cats.jpg" />
+                <img src="images/overoptimization/vlm-counting/six-turtles-2.jpg" />
+                <img src="images/overoptimization/vlm-counting/five-raccoons.jpg" />
+                <img src="images/overoptimization/vlm-counting/six-lions.jpg" />
+                <img src="images/overoptimization/vlm-counting/seven-birds.jpg" />
+                <img src="images/overoptimization/vlm-counting/six-monkeys.jpg" />
+                <img src="images/overoptimization/vlm-counting/six-cows.jpg" />
+                <!-- <img src="images/overoptimization/vlm-counting/three-tigers.jpg" /> -->
+            </div>
         </div>
     </div>
+
+    <script>
+        const replay = document.querySelector('.replay');
+
+        function reveal() {
+            replay.style.display = 'flex';
+        }
+
+        replay.addEventListener('click', () => {
+            const video = document.querySelector('video');
+            video.currentTime = 0;
+            video.play();
+            replay.style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>
